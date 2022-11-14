@@ -4,7 +4,7 @@ body {
 }
 
 body {
-	font-family: "Montserrat";
+	font-family: "Montserrat", sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
@@ -21,4 +21,5 @@ body {
 .container-fluid {
 	max-width: 1920px;
 	margin: 0 auto;
+	overflow: hidden;
 }
