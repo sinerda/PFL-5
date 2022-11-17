@@ -35,10 +35,26 @@ body {
 	text-transform: uppercase;
 	color: rgba(255, 255, 255, 0.7);
 	text-shadow: 0px 10px 50px rgba(49, 59, 68, 0.25);
+	cursor: default;
 }
 
 .title {
 	@extend %title;
 	text-transform: uppercase;
 	text-align: center;
+	&--black {
+		color: #000;
+	}
+}
+
+.line {
+	position: absolute;
+	width: 160px;
+	height: 0px;
+	border-top: 1px dashed #a9a9a9;
+	img {
+		position: relative;
+		left: 150px;
+		bottom: 10px;
+	}
 }

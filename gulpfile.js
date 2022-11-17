@@ -10,7 +10,7 @@ const del = require('del');
 
 function browsersync() {
   browserSync.init({
-    browser: "chrome",
+    browser: "C:/Program Files/Google/Chrome Dev/Application/chrome.exe",
     server: {
       baseDir: 'app/'
     }
