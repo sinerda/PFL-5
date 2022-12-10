@@ -63,3 +63,14 @@ body {
 		bottom: 10px;
 	}
 }
+
+.social-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.social-icon__link {
+	width: 20px;
+	height: 20px;
+	margin-right: 25px;
+}
