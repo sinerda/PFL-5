@@ -14,6 +14,16 @@ $(function () {
     centerMode: true,
   });
 
+  $('.header-button').on('click', function () {
+    $('.header-menu').toggleClass('active');
+  })
+  $('.header-menu__close').on('click', function () {
+    $('.header-menu').toggleClass('active');
+  })
+  $('.header-menu a').on('click', function () {
+    $('.header-menu').toggleClass('active');
+  })
+
   $(".donate-money__tabs").tabs();
 
   let
