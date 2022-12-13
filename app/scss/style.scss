@@ -253,6 +253,7 @@
   position: relative;
   top: 50px;
   left: 570px;
+  z-index: 1;
 }
 .essence__title {
   text-align: left;
@@ -272,7 +273,7 @@
 
 .practice {
   padding-bottom: 163px;
-  overflow: hidden;
+  position: relative;
 }
 .practice__inner {
   position: relative;
@@ -390,8 +391,8 @@
   position: absolute;
   width: 931px;
   height: 931px;
-  right: -407px;
-  top: 1504px;
+  right: -357px;
+  top: -216px;
   background: radial-gradient(50% 50% at 50% 50%, rgba(0, 125, 231, 0.3) 0%, rgba(0, 125, 231, 0) 100%);
   z-index: -1;
 }

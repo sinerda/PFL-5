@@ -1,6 +1,11 @@
-html,
-body {
-	height: 100%;
+// А зачем эти свойства вообще нужны ??
+// html,
+// body {
+// 	height: 100%;
+// }
+
+html {
+	overflow-x: hidden;
 }
 
 ::selection {
@@ -14,7 +19,7 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 	color: #3c4044;
-	overflow-x: hidden;
+	overflow-x: clip;
 }
 
 .container {
