@@ -643,6 +643,17 @@
   .modular__list-blocks {
     height: 750px;
   }
+  .progress__info-item {
+    height: auto;
+    img {
+      max-width: 70%;
+    }
+    p {
+      padding: 0 10px;
+      font-size: 15px;
+      bottom: 25px;
+    }
+  }
 }
 @media (max-width: 789px) {
   .header-logo img {
@@ -853,6 +864,12 @@
     min-height: 345px;
     object-fit: cover;
   }
+  .progress {
+    padding-bottom: 70px;
+  }
+  .progress__info-item p {
+    padding: 0 20px;
+  }
 }
 @media (max-width: 639px) {
   .header-logo img {
@@ -1058,6 +1075,9 @@
   .modular__title {
     max-height: 70px;
   }
+  .progress__info-item p {
+    line-height: 20px;
+  }
 }
 @media (max-width: 536px) {
   .title {
@@ -1240,6 +1260,14 @@
   }
   .location__title {
     margin-bottom: 10px;
+  }
+  .progress__info-item img {
+    max-width: 90%;
+  }
+  .progress__info-item p {
+    font-size: 14px;
+    line-height: 18px;
+    bottom: 15px;
   }
 }
 @media (max-width: 487px) {
@@ -1509,6 +1537,17 @@
       bottom: -38px;
     }
   }
+  .progress__info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .progress__info-item img {
+    max-width: 60%;
+  }
+  .progress__info-item p {
+    bottom: 30px;
+    padding: 0 50px;
+  }
 }
 @media (max-width: 393px) {
   .title {
@@ -1698,5 +1737,12 @@
     font-size: 14px;
     line-height: 15px;
     padding: 0 65px 2px;
+  }
+  .progress__info-item {
+    width: auto;
+    p {
+      padding: 0 25px;
+      bottom: 25px;
+    }
   }
 }
