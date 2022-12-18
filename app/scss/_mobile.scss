@@ -315,6 +315,31 @@
     line-height: 20px;
     padding: 5px 15px 20px;
   }
+  .about__inner {
+    background-size: cover;
+  }
+  .about__info {
+    width: 700px;
+    height: auto;
+    margin: 0 auto 75px;
+    flex-direction: column;
+  }
+  .about__info-wrap {
+    width: auto;
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  .about__info-block {
+    width: auto;
+    height: auto;
+  }
+  .about__people {
+    flex-wrap: wrap;
+    max-width: 1050px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 1039px) {
   .header {
@@ -654,6 +679,9 @@
       bottom: 25px;
     }
   }
+  .about__people {
+    max-width: 850px;
+  }
 }
 @media (max-width: 789px) {
   .header-logo img {
@@ -870,6 +898,13 @@
   .progress__info-item p {
     padding: 0 20px;
   }
+  .about {
+    padding-bottom: 62px;
+  }
+  .about__info {
+    width: auto;
+    margin: 0 15px 75px;
+  }
 }
 @media (max-width: 639px) {
   .header-logo img {
@@ -1078,6 +1113,15 @@
   .progress__info-item p {
     line-height: 20px;
   }
+  .about__title {
+    margin-bottom: 7px;
+  }
+  .about__info-wrap p {
+    line-height: 21px;
+  }
+  .about__info-block {
+    line-height: 25px;
+  }
 }
 @media (max-width: 536px) {
   .title {
@@ -1268,6 +1312,9 @@
     font-size: 14px;
     line-height: 18px;
     bottom: 15px;
+  }
+  .about__info {
+    padding: 27px 35px 35px;
   }
 }
 @media (max-width: 487px) {
@@ -1548,6 +1595,24 @@
     bottom: 30px;
     padding: 0 50px;
   }
+  .about__info {
+    padding: 19px 25px 25px;
+  }
+  .about__title {
+    margin-bottom: 0;
+  }
+  .about__info-block {
+    padding: 15px;
+    line-height: 22px;
+    font-size: 17px;
+  }
+  .about__info-wrap p {
+    line-height: 20px;
+    font-size: 15px;
+  }
+  .about__people-item {
+    height: 320px;
+  }
 }
 @media (max-width: 393px) {
   .title {
@@ -1744,5 +1809,17 @@
       padding: 0 25px;
       bottom: 25px;
     }
+  }
+  .about__info {
+    margin: 0 5px 45px;
+    padding: 20px 17px 17px;
+  }
+  .about__info-wrap p {
+    line-height: 19px;
+    font-size: 15px;
+  }
+  .about__info-block {
+    line-height: 19px;
+    font-size: 16px;
   }
 }
