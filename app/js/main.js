@@ -7,11 +7,27 @@ $(function () {
   })
 
   $('.partners__slider').slick({
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     variableWidth: true,
     rows: 0,
     centerMode: true,
+    responsive: [
+      {
+        breakpoint: 1040,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+          variableWidth: false,
+        }
+      },
+      {
+        breakpoint: 488,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
   });
 
   $('.header-button').on('click', function () {
