@@ -894,23 +894,6 @@
   backdrop-filter: blur(2px);
   border-radius: 50px;
   background: rgba(255, 255, 255, 1);
-  $border: 4px;
-  background-clip: padding-box;
-  border: $border solid transparent;
-  position: relative;
-  z-index: 0;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -$border;
-    border-radius: inherit;
-    background: linear-gradient(to right, rgba(187, 220, 249, 1), rgba(255, 243, 205, 1));
-  }
   &-title {
     margin-top: 135px;
   }
@@ -923,6 +906,9 @@
     color: #000;
     text-align: center;
   }
+}
+body.compensate-for-scrollbar {
+  padding-right: 0px;
 }
 .fancybox__content {
   padding: 0 50px;

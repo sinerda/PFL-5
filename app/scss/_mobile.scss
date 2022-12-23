@@ -1131,6 +1131,9 @@
       margin: -3px;
     }
   }
+  .donate-money__list-tabs-link .ui-tabs-anchor {
+    border: 3px;
+  }
 }
 @media (max-width: 720px) {
   .modular__title {
@@ -1408,7 +1411,7 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     padding: 0 40px !important;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
     max-width: 500px;
   }
   .donate-money__list-tabs-link {
