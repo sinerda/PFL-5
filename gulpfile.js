@@ -43,9 +43,10 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
-    'node_modules/mixitup/dist/mixitup.js',
     'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
     'node_modules/jquery-ui/dist/jquery-ui.js',
+    'node_modules/@splidejs/splide/dist/js/splide.min.js',
+    'node_modules/@splidejs/splide-extension-grid/dist/js/splide-extension-grid.min.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
@@ -56,7 +57,10 @@ function scripts() {
 
 
 function styles() {
-  return src('app/scss/style.scss')
+  return src([
+    'node_modules/@splidejs/splide/dist/css/splide-core.min.css',
+    'app/scss/style.scss'
+  ])
     .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({

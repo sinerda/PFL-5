@@ -58,16 +58,38 @@ $(function () {
     }
   }
 
+  $(".donate-money__tabs").tabs();
 
   // 
-  // НЕ ДОДЕЛАЛ. НЕ РАБОТАЕТ!
-  $(".donate-money__tabs").tabs();
-  let
-    tab_link = $('.donate-money__list-tabs-link'),
-    tab = $('.donate-money__tab-item'),
-    a = $('.donate-money__link');
-  tab_link.on('click', function () {
-    let number = $(this).find(a).length;
-    console.log(number);
-  })
+  // Splide JS - галерея
+  let main = new Splide('#main-carousel', {
+    type: 'fade',
+    rewind: true,
+    pagination: false,
+    arrows: false,
+    perPage: 1,
+    grid: {
+      cols: 2,
+      gap: { col: '20px' },
+    },
+  }).mount(window.splide.Extensions);
+
+  let thumbnails = new Splide('#thumbnail-carousel', {
+    fixedWidth: 180,
+    fixedHeight: 220,
+    gap: 0,
+    rewind: true,
+    pagination: false,
+    isNavigation: true,
+    perPage: 2,
+    focus: 'center',
+    breakpoints: {
+      600: {
+        fixedWidth: 60,
+        fixedHeight: 44,
+      },
+    },
+  }).mount();
+
+  main.sync(thumbnails);
 })

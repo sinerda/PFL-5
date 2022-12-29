@@ -636,10 +636,108 @@
     bottom: 45px;
   }
 }
+.progress__subtitle {
+  @extend %title-mini;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
 .progress__gallery {
+}
+.progress__gallery-item {
+  height: 450px;
+  width: 580px;
+  margin: 0 auto;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
   img {
-    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
+}
+.progress__gallery-date,
+.thumbnail-gallery__date {
+  position: absolute;
+  width: 101px;
+  height: 50px;
+  box-shadow: 0px 10px 50px rgba(49, 59, 68, 0.15);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 1);
+  // $border-gd: 4px;
+  // background-clip: padding-box;
+  // border: solid $border-gd transparent;
+  // z-index: 3;
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   z-index: -1;
+  //   margin: -$border-gd;
+  //   border-radius: inherit;
+  //   background: linear-gradient(to right, rgba(187, 220, 249, 1), rgba(255, 243, 205, 1));
+  // }
+  span {
+    font-size: 14px;
+    line-height: 30px;
+    color: #000000;
+  }
+}
+.progress__gallery-date {
+  top: 20px;
+  right: 20px;
+}
+.thumbnail-gallery {
+  height: 244px;
+  width: 900px;
+  margin: 0 auto;
+  top: -140px;
+  & .splide__slide img {
+    opacity: 0.7;
+  }
+  & .splide__slide.is-active img {
+    opacity: 1;
+  }
+}
+.thumbnail-gallery__item {
+  width: 180px;
+  height: 180px;
+  border-radius: 150px;
+  border: 10px solid #fff;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  z-index: 0;
+  background-color: #fff;
+  cursor: pointer;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.thumbnail-gallery__date {
+  position: fixed;
+  z-index: 2;
+}
+.splide__arrows {
+  background-color: aquamarine;
+  position: relative;
+  top: 170px;
+  z-index: 1;
+  width: 100%;
 }
 .about {
   padding-bottom: 150px;
