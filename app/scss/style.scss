@@ -642,11 +642,9 @@
   text-transform: uppercase;
   margin-bottom: 25px;
 }
-.progress__gallery {
-}
 .progress__gallery-item {
   height: 450px;
-  width: 580px;
+  max-width: 580px;
   margin: 0 auto;
   border-radius: 50px;
   overflow: hidden;
@@ -656,36 +654,36 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
+    position: relative;
+    z-index: -2;
   }
 }
 .progress__gallery-date,
 .thumbnail-gallery__date {
-  position: absolute;
   width: 101px;
   height: 50px;
   box-shadow: 0px 10px 50px rgba(49, 59, 68, 0.15);
-  backdrop-filter: blur(2px);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 1);
-  // $border-gd: 4px;
-  // background-clip: padding-box;
-  // border: solid $border-gd transparent;
-  // z-index: 3;
-  // &:before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   z-index: -1;
-  //   margin: -$border-gd;
-  //   border-radius: inherit;
-  //   background: linear-gradient(to right, rgba(187, 220, 249, 1), rgba(255, 243, 205, 1));
-  // }
+  $border-gd: 4px;
+  background-clip: padding-box;
+  border: solid $border-gd transparent;
+  position: absolute;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border-gd;
+    border-radius: inherit;
+    background: linear-gradient(to right, rgba(187, 220, 249, 1), rgba(255, 243, 205, 1));
+  }
   span {
     font-size: 14px;
     line-height: 30px;
@@ -697,6 +695,9 @@
   right: 20px;
 }
 .thumbnail-gallery {
+  height: 80px;
+}
+.thumbnail-gallery .splide__track {
   height: 244px;
   width: 900px;
   margin: 0 auto;
@@ -718,8 +719,9 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  z-index: 0;
+  z-index: -1;
   background-color: #fff;
+  position: relative;
   cursor: pointer;
   img {
     height: 100%;
@@ -729,15 +731,30 @@
   }
 }
 .thumbnail-gallery__date {
-  position: fixed;
-  z-index: 2;
+  position: relative;
+  margin: 0 auto;
+  bottom: 50px;
 }
 .splide__arrows {
-  background-color: aquamarine;
   position: relative;
-  top: 170px;
-  z-index: 1;
+  top: 30px;
   width: 100%;
+}
+.splide__arrow {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  width: 31px;
+  height: 42px;
+}
+.splide__arrow--prev {
+  background-image: url(../images/arrow-left.svg);
+}
+.splide__arrow--next {
+  background-image: url(../images/arrow-right.svg);
+  position: absolute;
+  right: 0;
 }
 .about {
   padding-bottom: 150px;
@@ -989,7 +1006,6 @@
   width: 380px;
   height: 356px;
   box-shadow: 0px 10px 50px rgba(49, 59, 68, 0.15);
-  backdrop-filter: blur(2px);
   border-radius: 50px;
   background: rgba(255, 255, 255, 1);
   &-title {

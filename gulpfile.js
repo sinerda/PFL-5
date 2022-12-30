@@ -45,7 +45,7 @@ function scripts() {
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
     'node_modules/jquery-ui/dist/jquery-ui.js',
-    'node_modules/@splidejs/splide/dist/js/splide.min.js',
+    'node_modules/@splidejs/splide/dist/js/splide.js',
     'node_modules/@splidejs/splide-extension-grid/dist/js/splide-extension-grid.min.js',
     'app/js/main.js'
   ])

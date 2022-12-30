@@ -41,13 +41,13 @@ $(function () {
   })
 
   // Редактируем текст внутри HTML (убираем лишние пробелы), чтобы красиво смотрелся на мобайле
-  const _487px = window.matchMedia("(max-width: 487px)");
   window.onresize = function () {
+    const _487px = window.matchMedia("(max-width: 487px)");
     const title = $('.practice__info-block-title');
     const text = $('.practice__info-block-text');
 
     if (_487px.matches) {
-      // Исправленный текст для мобильной версии
+      // Исправленный текст
       title.html('Інвестор (донор)');
       text.html('Інвестор (донор) вкладає власні кошти у купівлю модульного будинку + підписання офіційного договору.');
     }
@@ -72,6 +72,18 @@ $(function () {
       cols: 2,
       gap: { col: '20px' },
     },
+    breakpoints: {
+      1039: {
+        grid: {
+          gap: { col: '10px' }
+        }
+      },
+      720: {
+        grid: {
+          cols: 1
+        }
+      },
+    }
   }).mount(window.splide.Extensions);
 
   let thumbnails = new Splide('#thumbnail-carousel', {
@@ -84,9 +96,25 @@ $(function () {
     perPage: 2,
     focus: 'center',
     breakpoints: {
-      600: {
-        fixedWidth: 60,
-        fixedHeight: 44,
+      1039: {
+        fixedWidth: 160,
+        fixedHeight: 200,
+      },
+      720: {
+        fixedWidth: 150,
+        fixedHeight: 190,
+      },
+      536: {
+        fixedWidth: 130,
+        fixedHeight: 170,
+      },
+      487: {
+        fixedWidth: 100,
+        fixedHeight: 140,
+      },
+      393: {
+        fixedWidth: 80,
+        fixedHeight: 120,
       },
     },
   }).mount();

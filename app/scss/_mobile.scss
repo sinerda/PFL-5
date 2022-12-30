@@ -729,6 +729,18 @@
       bottom: 25px;
     }
   }
+  .thumbnail-gallery .splide__track {
+    width: 800px;
+    height: 204px;
+    top: -130px;
+  }
+  .thumbnail-gallery__item {
+    width: 160px;
+    height: 160px;
+  }
+  .thumbnail-gallery__date {
+    height: 40px;
+  }
   .about__people {
     max-width: 850px;
   }
@@ -772,6 +784,9 @@
 @media (max-width: 950px) {
   .modular__title {
     padding-top: 60px;
+  }
+  .thumbnail-gallery .splide__track {
+    width: 480px;
   }
 }
 @media (max-width: 835px) {
@@ -1138,6 +1153,25 @@
 @media (max-width: 720px) {
   .modular__title {
     padding: 20px 0 0 40px;
+  }
+  .progress__gallery-item {
+    max-width: 100%;
+  }
+  .thumbnail-gallery .splide__track {
+    width: 450px;
+    top: -120px;
+  }
+  .thumbnail-gallery__item {
+    width: 150px;
+    height: 150px;
+  }
+  .thumbnail-gallery__date {
+    width: 100px;
+    height: 35px;
+    bottom: 40px;
+  }
+  .splide__arrow {
+    width: 25px;
   }
   .footer__title {
     padding: 0;
@@ -1626,6 +1660,19 @@
     line-height: 18px;
     bottom: 15px;
   }
+  .thumbnail-gallery .splide__track {
+    width: 390px;
+    top: -110px;
+  }
+  .thumbnail-gallery__item {
+    width: 130px;
+    height: 130px;
+  }
+  .thumbnail-gallery__date {
+    width: 95px;
+    height: 30px;
+    bottom: 35px;
+  }
   .about__info {
     padding: 27px 35px 35px;
   }
@@ -1955,6 +2002,25 @@
     bottom: 30px;
     padding: 0 50px;
   }
+  .thumbnail-gallery .splide__track {
+    width: 300px;
+    top: -100px;
+  }
+  .thumbnail-gallery__item {
+    width: 100px;
+    height: 100px;
+  }
+  .thumbnail-gallery__date {
+    width: 75px;
+    height: 22px;
+    bottom: 25px;
+    span {
+      font-size: 12px;
+    }
+  }
+  .splide__arrows {
+    top: 5px;
+  }
   .about__info {
     padding: 19px 25px 25px;
   }
@@ -2242,6 +2308,27 @@
       padding: 0 25px;
       bottom: 25px;
     }
+  }
+  .progress__gallery-item {
+    height: 400px;
+  }
+  .thumbnail-gallery .splide__track {
+    width: 240px;
+    top: -90px;
+  }
+  .thumbnail-gallery__item {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #fff;
+  }
+  .thumbnail-gallery__date {
+    display: none;
+  }
+  .splide__arrows {
+    top: 0px;
+  }
+  .splide__arrow {
+    width: 20px;
   }
   .about__info {
     margin: 0 5px 45px;
