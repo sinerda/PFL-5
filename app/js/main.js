@@ -124,63 +124,75 @@ $(function () {
     main.sync(thumbnails);
   }
 
+  let Not_Moved = false;
+  let prevision = 0;
   // КНОПКИ ГАЛЕРЕИ
   // ВПЕРЁД
   $('.splide__arrow--next').on('click', function () {
-    let ROD_of_index = thumbnails.index % 2;
-    const _720px = window.matchMedia("(min-width: 720px)");
+    if (!_720px.matches) {
+      Not_Moved = true;
+      let ROD_of_index = thumbnails.index % 2;
 
-    if (_720px.matches) {
       if (ROD_of_index !== 0) {
         main.go('>');
         thumbnails.go('>');
+        prevision = main.index + 1;
       }
       else {
         main.go(0);
         thumbnails.go(0);
+        prevision = 0;
       }
     }
   })
   // НАЗАД
   $('.splide__arrow--prev').on('click', function () {
-    let ROD_of_index = thumbnails.index % 2;
-    const _720px = window.matchMedia("(min-width: 720px)");
+    if (!_720px.matches) {
+      Not_Moved = true;
+      let ROD_of_index = thumbnails.index % 2;
 
-    if (_720px.matches) {
       if (ROD_of_index !== 0) {
         main.go('<');
         thumbnails.go('-1');
+        prevision = main.index + 1;
       }
       else {
         if (thumbnails.index == 6) {
           main.go(4);
           thumbnails.go(6);
+          prevision = main.index + 1;
         }
         else {
           main.go('<');
           thumbnails.go('<');
+          prevision = main.index + 1;
         }
       }
     }
   })
 
-  let prevision = 0;
-  main.on('ed', function () {
-
-    let index = main.index + 1;
-    console.log('index: ' + index);
-    let difference = prevision - index;
-    console.log('difference: ' + difference);
-
-    if (difference <= 0) {
-      thumbnails.go('+2');
+  main.on('moved', function () {
+    if (!_720px.matches) {
+      out: if (!Not_Moved) {
+        let index = main.index + 1;
+        let difference = prevision - index;
+        if ((index == 1) && (difference == -1)) {
+          break out;
+        }
+        if (difference == 0) {
+          break out;
+        }
+        if (difference < 0) {
+          thumbnails.go('+2');
+        }
+        else {
+          thumbnails.go('-2');
+        }
+        prevision = index;
+      }
+      else {
+        Not_Moved = false;
+      }
     }
-    else {
-      thumbnails.go('-2');
-    }
-    prevision = index;
-
-    console.log('END. prevision: ' + prevision);
-    console.log('');
   });
 })
