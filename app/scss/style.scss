@@ -708,6 +708,9 @@
   & .splide__slide.is-active img {
     opacity: 1;
   }
+  & .splide__slide.is-next img {
+    opacity: 1;
+  }
 }
 .thumbnail-gallery__item {
   width: 180px;

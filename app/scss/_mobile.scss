@@ -1160,6 +1160,9 @@
   .thumbnail-gallery .splide__track {
     width: 450px;
     top: -120px;
+    & .splide__slide.is-next img {
+      opacity: 0.7;
+    }
   }
   .thumbnail-gallery__item {
     width: 150px;

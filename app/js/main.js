@@ -63,11 +63,11 @@ $(function () {
   // 
   // Splide JS - галерея
   let main = new Splide('#main-carousel', {
-    type: 'fade',
+    type: 'slide',
     rewind: true,
     pagination: false,
+    // isNavigation: true,
     arrows: false,
-    perPage: 1,
     grid: {
       cols: 2,
       gap: { col: '20px' },
@@ -92,9 +92,9 @@ $(function () {
     gap: 0,
     rewind: true,
     pagination: false,
-    isNavigation: true,
-    perPage: 2,
+    drag: false,
     focus: 'center',
+    perMove: 1,
     breakpoints: {
       1039: {
         fixedWidth: 160,
@@ -119,5 +119,68 @@ $(function () {
     },
   }).mount();
 
-  main.sync(thumbnails);
+  const _720px = window.matchMedia("(max-width: 720px)");
+  if (_720px.matches) {
+    main.sync(thumbnails);
+  }
+
+  // КНОПКИ ГАЛЕРЕИ
+  // ВПЕРЁД
+  $('.splide__arrow--next').on('click', function () {
+    let ROD_of_index = thumbnails.index % 2;
+    const _720px = window.matchMedia("(min-width: 720px)");
+
+    if (_720px.matches) {
+      if (ROD_of_index !== 0) {
+        main.go('>');
+        thumbnails.go('>');
+      }
+      else {
+        main.go(0);
+        thumbnails.go(0);
+      }
+    }
+  })
+  // НАЗАД
+  $('.splide__arrow--prev').on('click', function () {
+    let ROD_of_index = thumbnails.index % 2;
+    const _720px = window.matchMedia("(min-width: 720px)");
+
+    if (_720px.matches) {
+      if (ROD_of_index !== 0) {
+        main.go('<');
+        thumbnails.go('-1');
+      }
+      else {
+        if (thumbnails.index == 6) {
+          main.go(4);
+          thumbnails.go(6);
+        }
+        else {
+          main.go('<');
+          thumbnails.go('<');
+        }
+      }
+    }
+  })
+
+  let prevision = 0;
+  main.on('ed', function () {
+
+    let index = main.index + 1;
+    console.log('index: ' + index);
+    let difference = prevision - index;
+    console.log('difference: ' + difference);
+
+    if (difference <= 0) {
+      thumbnails.go('+2');
+    }
+    else {
+      thumbnails.go('-2');
+    }
+    prevision = index;
+
+    console.log('END. prevision: ' + prevision);
+    console.log('');
+  });
 })
