@@ -7,6 +7,7 @@ const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
+const ghPages = require('gulp-gh-pages');
 
 function browsersync() {
   browserSync.init({
@@ -87,15 +88,17 @@ function watching() {
   watch(['app/*.html']).on('change', browserSync.reload);
 }
 
+function pages() {
+  return src('dist/**/*').pipe(ghPages());
+}
+
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
-
+exports.deploy = pages;
 
 exports.build = series(cleanDist, images, build);
 exports.default = parallel(styles, scripts, browsersync, watching);
-
-
