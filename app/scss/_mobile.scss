@@ -338,6 +338,9 @@
     line-height: 20px;
     padding: 5px 15px 20px;
   }
+  .about__title {
+    text-align: center;
+  }
   .about__inner {
     background-size: cover;
   }
@@ -1759,6 +1762,9 @@
   .design-title {
     font-size: 35px;
   }
+  .essence {
+    padding-bottom: 20px;
+  }
   .essence__design-title {
     margin: -45px 0 0 20px;
   }
@@ -1772,6 +1778,7 @@
   .essence__info {
     top: 120px;
     padding: 35px 25px;
+    min-height: 270px;
   }
   .essence__title {
     font-size: 16px;
@@ -1940,6 +1947,7 @@
   }
   .modular__title {
     padding: 0 50px;
+    line-height: 30px;
   }
   .modular__list-blocks {
     flex-direction: column;
@@ -2147,6 +2155,10 @@
   .essence__info {
     top: 90px;
     padding: 30px 20px;
+    min-height: 320px;
+  }
+  .practice {
+    padding-bottom: 40px;
   }
   .practice__inner {
     padding: 70px 0px 50px;
@@ -2249,6 +2261,9 @@
     width: 210px;
     height: 55px;
   }
+  .history {
+    margin-bottom: 60px;
+  }
   .history__title {
     font-size: 18px;
     line-height: 25px;
@@ -2266,6 +2281,7 @@
   }
   .modular {
     background-position: -5px 40px;
+    padding-bottom: 40px;
   }
   .modular__inner {
     height: 1540px;
@@ -2305,6 +2321,9 @@
     line-height: 15px;
     padding: 0 65px 2px;
   }
+  .progress {
+    padding-bottom: 50px;
+  }
   .progress__info-item {
     width: auto;
     p {
@@ -2332,6 +2351,9 @@
   }
   .splide__arrow {
     width: 20px;
+  }
+  .about {
+    padding-bottom: 70px;
   }
   .about__info {
     margin: 0 5px 45px;
